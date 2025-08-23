@@ -14,6 +14,7 @@ return new class extends Migration {
     {
         DB::table('users')->insert([
             [
+                'id' => Str::uuid(),
                 'name' => 'fredyns',
                 'email' => 'dm@fredyns.id',
                 'email_verified_at' => now(),
@@ -21,6 +22,7 @@ return new class extends Migration {
                 'remember_token' => Str::random(10),
             ],
             [
+                'id' => Str::uuid(),
                 'name' => 'fredy',
                 'email' => 'fredy.ns@gmail.com',
                 'email_verified_at' => now(),
@@ -28,6 +30,7 @@ return new class extends Migration {
                 'remember_token' => Str::random(10),
             ],
             [
+                'id' => Str::uuid(),
                 'name' => 'Fredy BKI',
                 'email' => 'fredy.ns@bki.co.id',
                 'email_verified_at' => now(),
@@ -42,6 +45,7 @@ return new class extends Migration {
 
         DB::table('users')->insert([
             [
+                'id' => Str::uuid(),
                 'name' => 'Sys-Admin',
                 'email' => 'admin@admin.com',
                 'email_verified_at' => now(),
@@ -49,6 +53,7 @@ return new class extends Migration {
                 'remember_token' => Str::random(10),
             ],
             [
+                'id' => Str::uuid(),
                 'name' => 'Sys-User',
                 'email' => 'user@app.dev',
                 'email_verified_at' => now(),
