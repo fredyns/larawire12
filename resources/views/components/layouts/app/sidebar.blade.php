@@ -15,6 +15,10 @@
                 <flux:navlist.group :heading="__('Platform')" class="grid">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
                 </flux:navlist.group>
+                <flux:navlist.group :heading="__('Sample')" class="grid">
+                    <flux:navlist.item icon="home" :href="route('sample.records.index')" :current="request()->routeIs('sample.records.index')" wire:navigate>{{ __('Records') }}</flux:navlist.item>
+{{--                    <flux:navlist.item icon="home" :href="route('sample.records.create')" :current="request()->routeIs('sample.records.create')" wire:navigate>{{ __('New Record') }}</flux:navlist.item>--}}
+                </flux:navlist.group>
             </flux:navlist>
 
             <flux:spacer />
@@ -126,6 +130,9 @@
         </flux:header>
 
         {{ $slot }}
+
+        @livewireScripts
+
 
         @fluxScripts
     </body>
