@@ -2,7 +2,6 @@
 
 namespace Database\Seeders\Sample;
 
-use App\Models\Record;
 use App\Models\Sample\SampleRecord;
 use Illuminate\Database\Seeder;
 
