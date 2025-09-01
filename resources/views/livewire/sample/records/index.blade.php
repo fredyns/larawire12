@@ -106,9 +106,9 @@
                         <flux:button href="{{ route('sample.records.show', $record->id) }}" variant="filled">
                             <flux:icon.eye variant="mini"/>
                         </flux:button>
-                        {{--                        <flux:button href="{{ route('sample.records.edit', $record) }}" variant="filled">--}}
-                        {{--                            <flux:icon.pencil variant="mini"/>--}}
-                        {{--                        </flux:button>--}}
+                        <flux:button href="{{ route('sample.records.edit', $record) }}" variant="filled">
+                            <flux:icon.pencil variant="mini"/>
+                        </flux:button>
                         <flux:button
                             wire:confirm="Are you sure?"
                             wire:click="delete('{{ $record->id }}')"

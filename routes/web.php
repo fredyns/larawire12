@@ -1,6 +1,6 @@
 <?php
 
-use App\Livewire\Sample\Records\{SampleRecordCreate, SampleRecordIndex, SampleRecordShow};
+use App\Livewire\Sample\Records\{SampleRecordCreate, SampleRecordEdit, SampleRecordIndex, SampleRecordShow};
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
@@ -22,7 +22,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/sample/records', SampleRecordIndex::class)->name('sample.records.index');
     Route::get('/sample/records/create', SampleRecordCreate::class)->name('sample.records.create');
     Route::get('/sample/records/{record}', SampleRecordShow::class)->name('sample.records.show');
-//    Route::get('/sample/records/{record}/edit', SampleRecordEdit::class)->name('sample.records.edit');
+    Route::get('/sample/records/{record}/edit', SampleRecordEdit::class)->name('sample.records.edit');
 });
 
 require __DIR__ . '/auth.php';

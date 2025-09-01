@@ -22,7 +22,13 @@ use App\Models\Sample\SampleRecord;
         >
             {{ __('Index') }}
         </flux:button>
-        {{--        <flux:button href="{{ route('sample.records.edit', $record) }}" variant="filled">{{ __('Edit') }}</flux:button>--}}
+        <flux:button
+            href="{{ route('sample.records.edit', $record) }}"
+            variant="filled"
+            icon="pencil"
+        >
+            {{ __('Edit') }}
+        </flux:button>
         <flux:button
             wire:confirm="Are you sure?"
             wire:click="delete()"
