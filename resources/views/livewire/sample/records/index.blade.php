@@ -25,6 +25,7 @@
                             icon="magnifying-glass"
                             placeholder="Search..."
                             clearable
+                            wire:dirty.class="border-yellow"
                         />
                     </div>
                     <div>

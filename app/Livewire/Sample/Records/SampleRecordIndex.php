@@ -25,6 +25,14 @@ class SampleRecordIndex extends Component
         $this->resetPage();            // jump back to page 1 on the new search
     }
 
+    public function updatedSearch(): void
+    {
+        // Skip rendering if search is too short
+        if (strlen($this->search) < 3 or $this->search === 'null') {
+            $this->skipRender();
+        }
+    }
+
     /**
      * @throws AuthorizationException
      */
@@ -51,7 +59,7 @@ class SampleRecordIndex extends Component
     {
         $this->authorize('index', SampleRecord::class);
 
-        if (!$this->search or $this->search == 'null') {
+        if (!$this->search or $this->search === 'null') {
             $this->search = '';
         }
 
