@@ -1,6 +1,6 @@
 <?php
 /**
- * @var $record App\Models\Record
+ * @var $record App\Models\Sample\SampleRecord
  * todo: add var $users array<int, string>
  */
 ?>
